@@ -3,6 +3,8 @@ package raisetech.StudentManagement5;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import raisetech.StudentManagement5.data.Student;
+import raisetech.StudentManagement5.data.StudentCourse;
 
 @Mapper
 public interface StudentRepository {
