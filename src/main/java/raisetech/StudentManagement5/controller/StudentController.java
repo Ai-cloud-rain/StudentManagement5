@@ -4,25 +4,29 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import raisetech.StudentManagement5.StudentRepository;
 import raisetech.StudentManagement5.data.Student;
 import raisetech.StudentManagement5.data.StudentCourse;
+import raisetech.StudentManagement5.service.StudentService;
 
 @RestController
 public class StudentController {
 
-  @Autowired
-  private StudentRepository repository;
 
+  private StudentService service;
+
+  @Autowired
+  public StudentController(StudentService service) {
+    this.service = service;
+  }
 
   @GetMapping("/studentList")
   public List<Student> getStudentList() {
-    return repository.searchStudent();
+    return service.searchStudentList();
   }
 
   @GetMapping("/studentCourseList")
   public List<StudentCourse> getStudentCourseList() {
-    return repository.searchStudentCourse();
+    return service.searchStudentCourseList();
   }
 
 
