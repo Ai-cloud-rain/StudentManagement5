@@ -25,4 +25,8 @@ public class StudentService {
     return repository.searchStudentCourse();
   }
 
+  public List<Student> searchStudentInAgeRange(int minAge, int maxAge) {
+    return repository.searchStudentInAgeRange(minAge, maxAge);
+  }
+
 }
