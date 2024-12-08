@@ -1,4 +1,4 @@
-package raisetech.StudentManagement5;
+package raisetech.StudentManagement5.repository;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
